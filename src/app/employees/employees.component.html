@@ -1,0 +1,12 @@
+<ul class="employees">
+    <li class="employee" *ngFor="let employees of employees$ | async">
+    <mat-card>
+        <h3>First Name: {{employees.firstName}}</h3>
+        <h3>Last Name: {{employees.lastName}}</h3>
+        <h3>Email: {{employees.email}}</h3>
+    </mat-card>
+    </li>
+</ul>
+<button mat-raised-button color="primary" class="fab" (click)="onFabClick()">Add Employees</button>
+
+

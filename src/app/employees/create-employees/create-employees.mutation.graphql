@@ -1,0 +1,8 @@
+mutation createEmployees($createEmployeesData: CreateEmployeesInput!) {
+  createEmployees(createEmployeesData: $createEmployeesData) {
+    _id
+    firstName
+    lastName
+    email
+  }
+}

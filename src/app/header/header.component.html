@@ -1,0 +1,18 @@
+<mat-toolbar class="navbar">
+    <a routerLink="/">
+      <h1>Employees Application</h1>
+    </a>
+    <ul class="unorderedList">
+      <li>
+        <div *ngIf="(isLoggedIn$ | async) === true; else login">
+          <button mat-raised-button (click)="onLogout()">Logout</button>
+        </div>
+        <ng-template #login>
+          <button mat-raised-button routerLink="/login">Login</button>
+        </ng-template>
+      </li>
+      <li *ngIf="(isLoggedIn$ | async) !== true">
+        <button mat-raised-button routerLink="/signup">Sign Up</button>
+      </li>
+    </ul>
+  </mat-toolbar>

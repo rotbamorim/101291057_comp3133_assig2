@@ -1,0 +1,8 @@
+query employees {
+  employees {
+    _id
+    firstName
+    lastName
+    email
+  }
+}

@@ -1,0 +1,32 @@
+<div class="container">
+    <h2>Create Employees</h2>
+    <p>
+    <mat-form-field mat-form-field appearance="outline">
+    <mat-label>First Name</mat-label>
+    <input type="text" matInput [formControl]="employeeFirstName" required/>
+    <mat-error *ngIf="employeeFirstName.invalid">
+    {{getEmployeeNameError()}}
+    </mat-error>
+    </mat-form-field>
+    </p>
+    <p>
+    <mat-form-field appearance="outline">
+    <mat-label>Last Name</mat-label>
+    <input type="text" matInput [formControl]="employeeLastName" required/>
+    <mat-error *ngIf="employeeLastName.invalid">
+    {{getEmployeeNameError()}}
+    </mat-error>
+    </mat-form-field>
+    </p>
+    <p>
+    <mat-form-field appearance="outline">
+    <mat-label>Email</mat-label>
+    <input type="text" matInput [formControl]="employeeEmail" required/>
+    <mat-error *ngIf="employeeEmail.invalid">
+    {{getEmployeeNameError()}}
+    </mat-error>
+    </mat-form-field>
+    </p>
+    <button mat-raised-button color="primary" (click)="createEmployees()">Create</button>
+    
+</div>
